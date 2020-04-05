@@ -1,0 +1,20 @@
+@import "components/vars";
+@import "components/mixins";
+@import "components/print";
+
+@include main;
+
+header {
+  height: 50px;
+  background-color: $secondary_clr;
+}
+
+main {
+  height: 200px;
+  background-color: $tertiary_clr;
+}
+
+footer {
+  height: 50px;
+  background-color: $primary_clr;
+}

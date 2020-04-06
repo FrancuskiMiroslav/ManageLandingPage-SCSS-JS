@@ -264,7 +264,7 @@ header .close {
   /* line 136, src/sass/style.scss */
   header .overlay:before {
     content: "";
-    min-height: 100vh;
+    min-height: calc(100vh - 100px);
     min-width: 100vw;
     background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(255, 255, 255, 0.503102)));
     background: linear-gradient(0deg, black 0%, rgba(255, 255, 255, 0.503102) 100%);
@@ -292,6 +292,7 @@ main .banner {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 850px) {
@@ -304,40 +305,249 @@ main .banner {
   }
 }
 
-/* line 163, src/sass/style.scss */
+/* line 164, src/sass/style.scss */
 main .banner .left {
   min-height: 378px;
 }
 
 @media (max-width: 850px) {
-  /* line 163, src/sass/style.scss */
+  /* line 164, src/sass/style.scss */
   main .banner .left {
     text-align: center;
   }
 }
 
-/* line 169, src/sass/style.scss */
+/* line 170, src/sass/style.scss */
 main .banner .left h1 {
   font-size: 50px;
   line-height: 55px;
   margin-bottom: 50px;
 }
 
-/* line 175, src/sass/style.scss */
+/* line 176, src/sass/style.scss */
 main .banner .left p {
   margin-bottom: 50px;
 }
 
 @media (min-width: 850px) {
-  /* line 175, src/sass/style.scss */
+  /* line 176, src/sass/style.scss */
   main .banner .left p {
     max-width: 350px;
   }
 }
 
 @media (max-width: 850px) {
-  /* line 183, src/sass/style.scss */
+  /* line 184, src/sass/style.scss */
   main .banner__img {
     max-width: 100%;
+  }
+}
+
+/* line 191, src/sass/style.scss */
+main .boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 850px) {
+  /* line 191, src/sass/style.scss */
+  main .boxes {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* line 191, src/sass/style.scss */
+  main .boxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 203, src/sass/style.scss */
+main .boxes .left {
+  width: 48%;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+@media (max-width: 850px) {
+  /* line 203, src/sass/style.scss */
+  main .boxes .left {
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 35px;
+  }
+}
+
+/* line 213, src/sass/style.scss */
+main .boxes .left h2 {
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 35px;
+}
+
+@media (max-width: 850px) {
+  /* line 213, src/sass/style.scss */
+  main .boxes .left h2 {
+    line-height: 50px;
+  }
+}
+
+/* line 222, src/sass/style.scss */
+main .boxes .left p {
+  max-width: 335px;
+}
+
+@media (max-width: 850px) {
+  /* line 222, src/sass/style.scss */
+  main .boxes .left p {
+    max-width: 100%;
+    line-height: 24px;
+  }
+}
+
+/* line 231, src/sass/style.scss */
+main .boxes__box-container {
+  width: 48%;
+}
+
+@media (max-width: 850px) {
+  /* line 231, src/sass/style.scss */
+  main .boxes__box-container {
+    width: 100%;
+    padding-left: 16px;
+  }
+}
+
+/* line 239, src/sass/style.scss */
+main .boxes__box {
+  counter-increment: count;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 243, src/sass/style.scss */
+main .boxes__box:before {
+  content: counter(count);
+  border: none;
+  color: #ffffff;
+  background-color: #f25f3a;
+  border-radius: 50px;
+  padding: 16px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  -webkit-box-shadow: 0px 10px 15px -10px #f25f3a;
+          box-shadow: 0px 10px 15px -10px #f25f3a;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 16px;
+  padding: 12px 28px;
+  height: 100%;
+  margin-right: 28px;
+}
+
+/* line 115, src/sass/components/_mixins.scss */
+main .boxes__box:before:hover {
+  background-color: rgba(242, 95, 58, 0.5);
+}
+
+@media (max-width: 850px) {
+  /* line 243, src/sass/style.scss */
+  main .boxes__box:before {
+    display: none;
+  }
+}
+
+/* line 257, src/sass/style.scss */
+main .boxes__box:nth-child(-n + 9):before {
+  content: "0" counter(count);
+}
+
+/* line 262, src/sass/style.scss */
+main .boxes__info {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+/* line 264, src/sass/style.scss */
+main .boxes__info h3 {
+  font-size: 14px;
+  padding: 12px 0;
+  margin-bottom: 15px;
+  counter-increment: countmobile;
+  color: #1d1e25;
+}
+
+@media (max-width: 850px) {
+  /* line 264, src/sass/style.scss */
+  main .boxes__info h3 {
+    background-color: #ffefeb;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  /* line 275, src/sass/style.scss */
+  main .boxes__info h3:before {
+    content: counter(countmobile);
+    border: none;
+    color: #ffffff;
+    background-color: #f25f3a;
+    border-radius: 50px;
+    padding: 16px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    -webkit-box-shadow: 0px 10px 15px -10px #f25f3a;
+            box-shadow: 0px 10px 15px -10px #f25f3a;
+    cursor: pointer;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 16px;
+    padding: 12px 24px;
+    height: 100%;
+    margin-right: 16px;
+  }
+  /* line 115, src/sass/components/_mixins.scss */
+  main .boxes__info h3:before:hover {
+    background-color: rgba(242, 95, 58, 0.5);
+  }
+  /* line 285, src/sass/style.scss */
+  main .boxes__info h3:nth-child(-n + 9):before {
+    content: "0" counter(countmobile);
+  }
+}
+
+/* line 291, src/sass/style.scss */
+main .boxes__info p {
+  margin-bottom: 45px;
+}
+
+@media (max-width: 850px) {
+  /* line 291, src/sass/style.scss */
+  main .boxes__info p {
+    line-height: 30px;
   }
 }

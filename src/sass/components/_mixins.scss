@@ -25,6 +25,10 @@
   .btn {
     @include btn;
   }
+
+  p {
+    color: $darkGrayishBlue;
+  }
 }
 
 // responsive fonts

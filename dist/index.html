@@ -8,25 +8,30 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!--endbuild-->
-    <title>Gulp_project</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <title>Frontend Mentor | Manage landing page</title>
   </head>
 
   <body>
     <header>
-      <h1>Copy Me</h1>
-      <p>
-        Anything you put in the lorem <code>copy</code> directory gets copied
-        as-is into the <code>dist</code> directory.
-      </p>
-      <p><button id="click-me">Click Me</button></p>
+      <img src="svg/logo.svg" alt="" class="logo" />
+      <nav class="main-nav" id="main-nav">
+        <ul class="main-nav__list" id="nav-list">
+          <li class="main-nav__item"><a href="#">Pricing</a></li>
+          <li class="main-nav__item"><a href="#">Product</a></li>
+          <li class="main-nav__item"><a href="#">About Us</a></li>
+          <li class="main-nav__item"><a href="#">Careers</a></li>
+          <li class="main-nav__item"><a href="#">Community</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-nav__btn" id="hamburger">
+        <img src="svg/icon-hamburger.svg" alt="" class="hamburger" id="open" />
+        <img src="svg/icon-close.svg" alt="" class="close" id="close" />
+      </div>
+      <button class="btn">Get Started</button>
     </header>
-    <main>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-google"></i></a>
-      <a href="#"><i class="fas fa-rss"></i></a>
-    </main>
+    <main></main>
     <footer></footer>
     <!--build:js js/main.min.js -->
     <script type="text/javascript" src="js/jquery.js"></script>

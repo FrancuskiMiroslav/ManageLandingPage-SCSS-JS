@@ -1,7 +1,7 @@
-$main_font: "Roboto", sans-serif;
+$main_font: "Be Vietnam", sans-serif;
 $secondary_font: "Gilroy", cursive;
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css?family=Baloo+Bhai");
 
@@ -11,13 +11,17 @@ $secondary_font: "Gilroy", cursive;
   src: url("../fonts/Gilroy-ExtraBold.otf");
 }
 
-$blue_gray: #253746;
-$neon-green: #47d7ac;
-$pink: #fb637e;
+$brightRed: hsl(12, 88%, 59%);
+$darkBlue: hsl(228, 39%, 23%);
 
-$primary_clr: $blue_gray;
-$secondary_clr: $neon-green;
-$tertiary_clr: $pink;
+$darkGrayishBlue: hsl(227, 12%, 61%);
+$veryDarkBlue: hsl(233, 12%, 13%);
+$veryPaleRed: hsl(13, 100%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+
+$primary_clr: $brightRed;
+$secondary_clr: $darkBlue;
+$tertiary_clr: $veryDarkBlue;
 
 $show-image: true;
 $home-image: url(../images/home-bg-min.jpg);

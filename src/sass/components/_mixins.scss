@@ -2,8 +2,7 @@
   html {
     scroll-behavior: smooth;
     box-sizing: border-box;
-    font-family: $main_font, $secondary_font, Verdana, Geneva, Tahoma,
-      sans-serif;
+    font-family: $main_font, $secondary_font, Verdana, Geneva, Tahoma, sans-serif;
   }
 
   *,
@@ -21,7 +20,10 @@
 
   a {
     text-decoration: none;
-    color: #ffffff;
+  }
+
+  .btn {
+    @include btn;
   }
 }
 
@@ -41,8 +43,7 @@
       font-size: $min-font-size;
       @media screen and (min-width: $min-vw) {
         font-size: calc(
-          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
-            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
         );
       }
       @media screen and (min-width: $max-vw) {
@@ -88,23 +89,28 @@
   @font-face {
     font-family: "#{$name}";
     src: url("../fonts/#{$file}.eot");
-    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
-      url("../fonts/#{$file}.woff") format("woff"),
-      url("../fonts/#{$file}.ttf") format("truetype"),
-      url("../fonts/#{$file}.svg?#webfont") format("svg");
+    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"), url("../fonts/#{$file}.woff") format("woff"),
+      url("../fonts/#{$file}.ttf") format("truetype"), url("../fonts/#{$file}.svg?#webfont") format("svg");
   }
 }
 
 @mixin btn {
-  border: 1px solid $tertiary_clr;
-  color: $tertiary_clr;
-  padding: 1em 2em;
+  border: none;
+  color: #ffffff;
+  background-color: $primary_clr;
+  border-radius: 50px;
+  padding: 16px 35px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
-  margin: 30px auto;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0px 10px 15px -10px rgba($color: $primary_clr, $alpha: 1);
   cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color: $primary_clr, $alpha: 0.5);
+  }
 }
 
 @mixin easeOut {

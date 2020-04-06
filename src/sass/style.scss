@@ -135,7 +135,7 @@ header {
     @include media-max-width(850) {
       &:before {
         content: "";
-        min-height: 100vh;
+        min-height: calc(100vh - 100px);
         min-width: 100vw;
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.5031021632505267) 100%);
         opacity: 0.5;
@@ -155,6 +155,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 100px;
 
     @include media-max-width(850) {
       flex-direction: column-reverse;
@@ -183,6 +184,115 @@ main {
     &__img {
       @include media-max-width(850) {
         max-width: 100%;
+      }
+    }
+  }
+
+  .boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    @include media-min-width(850) {
+      @include wrapper(1170, 25);
+    }
+    @include media-max-width(850) {
+      flex-direction: column;
+    }
+
+    .left {
+      width: 48%;
+      align-self: baseline;
+      @include media-max-width(850) {
+        align-self: center;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 0 35px;
+      }
+      h2 {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 35px;
+        @include media-max-width(850) {
+          line-height: 50px;
+        }
+      }
+
+      p {
+        max-width: 335px;
+        @include media-max-width(850) {
+          max-width: 100%;
+          line-height: 24px;
+        }
+      }
+    }
+
+    &__box-container {
+      width: 48%;
+      @include media-max-width(850) {
+        width: 100%;
+        padding-left: 16px;
+      }
+    }
+
+    &__box {
+      counter-increment: count;
+      display: flex;
+
+      &:before {
+        content: counter(count);
+        @include btn;
+        box-shadow: none;
+        font-size: 16px;
+        padding: 12px 28px;
+        height: 100%;
+        margin-right: 28px;
+
+        @include media-max-width(850) {
+          display: none;
+        }
+      }
+
+      &:nth-child(-n + 9):before {
+        content: "0" counter(count);
+      }
+    }
+
+    &__info {
+      @include wrapper(1440, 0);
+      h3 {
+        font-size: 14px;
+        padding: 12px 0;
+        margin-bottom: 15px;
+        counter-increment: countmobile;
+        color: $tertiary_clr;
+
+        @include media-max-width(850) {
+          background-color: $veryPaleRed;
+          padding: 0;
+          margin-bottom: 20px;
+          &:before {
+            content: counter(countmobile);
+            @include btn;
+            box-shadow: none;
+            font-size: 16px;
+            padding: 12px 24px;
+            height: 100%;
+            margin-right: 16px;
+          }
+
+          &:nth-child(-n + 9):before {
+            content: "0" counter(countmobile);
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 45px;
+        @include media-max-width(850) {
+          line-height: 30px;
+        }
       }
     }
   }

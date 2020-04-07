@@ -393,7 +393,8 @@ main {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    z-index: 20;
+    z-index: 1;
+    overflow: hidden;
     @include media-max-width(850) {
       padding: 90px 35px;
     }
@@ -404,6 +405,7 @@ main {
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      z-index: 5;
 
       @include media-max-width(850) {
         flex-direction: column;
@@ -421,7 +423,6 @@ main {
       .btn {
         background-color: #ffffff;
         color: $primary_clr;
-        z-index: 10;
 
         &:hover {
           color: rgba($color: $primary_clr, $alpha: 0.5);
@@ -438,7 +439,6 @@ main {
       height: 40vw;
       right: -25%;
       bottom: 28%;
-      z-index: -5;
       opacity: 0.1;
 
       @include media-max-width(850) {
@@ -458,7 +458,6 @@ main {
       left: -11%;
       top: -15%;
       opacity: 0.1;
-      z-index: -5;
 
       @include media-max-width(850) {
         height: 100vw;
@@ -470,17 +469,58 @@ main {
 }
 
 footer {
-  .attribution {
-    color: $secondary_clr;
-    text-align: center;
-    padding: 25px;
-    a,
-    a:visited,
-    a:active {
-      color: $primary_clr;
+  background-color: $tertiary_clr;
+  z-index: 20;
+  .footer {
+    @include wrapper(1170, 25);
+    padding: 60px 25px;
 
-      &:hover {
-        color: rgba($color: $secondary_clr, $alpha: 0.5);
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      min-height: 140px;
+
+      .logo {
+        path {
+          fill: #ffffff;
+        }
+
+        .dots {
+          path {
+            fill: $primary_clr;
+          }
+        }
+      }
+    }
+
+    &__social-icons {
+      display: flex;
+      margin-top: auto;
+
+      li {
+        margin-right: 10px;
+
+        .svg-icon {
+          &:hover {
+            fill: $primary_clr;
+          }
+        }
+      }
+    }
+
+    .attribution {
+      color: $secondary_clr;
+      text-align: center;
+      padding: 25px;
+      a,
+      a:visited,
+      a:active {
+        color: $primary_clr;
+
+        &:hover {
+          color: rgba($color: $secondary_clr, $alpha: 0.5);
+        }
       }
     }
   }

@@ -58,7 +58,7 @@ a {
   cursor: pointer;
 }
 
-/* line 115, src/sass/components/_mixins.scss */
+/* line 123, src/sass/components/_mixins.scss */
 .btn:hover {
   background-color: rgba(242, 95, 58, 0.5);
 }
@@ -66,6 +66,19 @@ a {
 /* line 29, src/sass/components/_mixins.scss */
 p {
   color: #9095a7;
+}
+
+/* line 33, src/sass/components/_mixins.scss */
+h2 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+@media (max-width: 850px) {
+  /* line 33, src/sass/components/_mixins.scss */
+  h2 {
+    line-height: 50px;
+  }
 }
 
 /* line 7, src/sass/style.scss */
@@ -419,45 +432,36 @@ main .boxes .left {
 
 /* line 231, src/sass/style.scss */
 main .boxes .left h2 {
-  font-size: 36px;
-  line-height: 36px;
   margin-bottom: 35px;
 }
 
-@media (max-width: 850px) {
-  /* line 231, src/sass/style.scss */
-  main .boxes .left h2 {
-    line-height: 50px;
-  }
-}
-
-/* line 240, src/sass/style.scss */
+/* line 235, src/sass/style.scss */
 main .boxes .left p {
   max-width: 335px;
 }
 
 @media (max-width: 850px) {
-  /* line 240, src/sass/style.scss */
+  /* line 235, src/sass/style.scss */
   main .boxes .left p {
     max-width: 100%;
     line-height: 24px;
   }
 }
 
-/* line 249, src/sass/style.scss */
+/* line 244, src/sass/style.scss */
 main .boxes__box-container {
   width: 48%;
 }
 
 @media (max-width: 850px) {
-  /* line 249, src/sass/style.scss */
+  /* line 244, src/sass/style.scss */
   main .boxes__box-container {
     width: 100%;
     padding-left: 16px;
   }
 }
 
-/* line 257, src/sass/style.scss */
+/* line 252, src/sass/style.scss */
 main .boxes__box {
   counter-increment: count;
   display: -webkit-box;
@@ -465,7 +469,7 @@ main .boxes__box {
   display: flex;
 }
 
-/* line 261, src/sass/style.scss */
+/* line 256, src/sass/style.scss */
 main .boxes__box:before {
   content: counter(count);
   border: none;
@@ -489,31 +493,31 @@ main .boxes__box:before {
   margin-right: 28px;
 }
 
-/* line 115, src/sass/components/_mixins.scss */
+/* line 123, src/sass/components/_mixins.scss */
 main .boxes__box:before:hover {
   background-color: rgba(242, 95, 58, 0.5);
 }
 
 @media (max-width: 850px) {
-  /* line 261, src/sass/style.scss */
+  /* line 256, src/sass/style.scss */
   main .boxes__box:before {
     display: none;
   }
 }
 
-/* line 275, src/sass/style.scss */
+/* line 270, src/sass/style.scss */
 main .boxes__box:nth-child(-n + 9):before {
   content: "0" counter(count);
 }
 
-/* line 280, src/sass/style.scss */
+/* line 275, src/sass/style.scss */
 main .boxes__info {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 0px;
 }
 
-/* line 282, src/sass/style.scss */
+/* line 277, src/sass/style.scss */
 main .boxes__info h3 {
   font-size: 14px;
   padding: 12px 0;
@@ -523,13 +527,13 @@ main .boxes__info h3 {
 }
 
 @media (max-width: 850px) {
-  /* line 282, src/sass/style.scss */
+  /* line 277, src/sass/style.scss */
   main .boxes__info h3 {
     background-color: #ffefeb;
     padding: 0;
     margin-bottom: 20px;
   }
-  /* line 293, src/sass/style.scss */
+  /* line 288, src/sass/style.scss */
   main .boxes__info h3:before {
     content: counter(countmobile);
     border: none;
@@ -552,52 +556,53 @@ main .boxes__info h3 {
     height: 100%;
     margin-right: 16px;
   }
-  /* line 115, src/sass/components/_mixins.scss */
+  /* line 123, src/sass/components/_mixins.scss */
   main .boxes__info h3:before:hover {
     background-color: rgba(242, 95, 58, 0.5);
   }
-  /* line 303, src/sass/style.scss */
+  /* line 298, src/sass/style.scss */
   main .boxes__info h3:nth-child(-n + 9):before {
     content: "0" counter(countmobile);
   }
 }
 
-/* line 309, src/sass/style.scss */
+/* line 304, src/sass/style.scss */
 main .boxes__info p {
   margin-bottom: 45px;
 }
 
 @media (max-width: 850px) {
-  /* line 309, src/sass/style.scss */
+  /* line 304, src/sass/style.scss */
   main .boxes__info p {
     line-height: 30px;
   }
 }
 
-/* line 318, src/sass/style.scss */
+/* line 313, src/sass/style.scss */
 main .carousel {
   text-align: center;
   padding-bottom: 180px;
   min-width: 100%;
+  z-index: 5;
 }
 
-/* line 323, src/sass/style.scss */
+/* line 319, src/sass/style.scss */
 main .carousel h2 {
   margin-bottom: 60px;
 }
 
-/* line 327, src/sass/style.scss */
+/* line 323, src/sass/style.scss */
 main .carousel .btn {
   margin-top: 80px;
 }
 
-/* line 331, src/sass/style.scss */
+/* line 327, src/sass/style.scss */
 main .carousel__container {
   padding-top: 40px;
   min-width: 100%;
 }
 
-/* line 336, src/sass/style.scss */
+/* line 332, src/sass/style.scss */
 main .carousel .swiper-slide {
   background-color: #fafafa;
   padding: 40px;
@@ -608,13 +613,13 @@ main .carousel .swiper-slide {
 }
 
 @media (max-width: 850px) {
-  /* line 336, src/sass/style.scss */
+  /* line 332, src/sass/style.scss */
   main .carousel .swiper-slide {
     width: 100%;
   }
 }
 
-/* line 346, src/sass/style.scss */
+/* line 342, src/sass/style.scss */
 main .carousel .swiper-slide .carousel__img {
   max-width: 75px;
   top: 0;
@@ -624,20 +629,20 @@ main .carousel .swiper-slide .carousel__img {
 }
 
 @media (max-width: 850px) {
-  /* line 353, src/sass/style.scss */
+  /* line 349, src/sass/style.scss */
   main .carousel .swiper-slide .carousel__content {
     padding: 0 40px;
   }
 }
 
-/* line 358, src/sass/style.scss */
+/* line 354, src/sass/style.scss */
 main .carousel .swiper-slide .carousel__content .carousel__title {
   font: 24px;
   margin-bottom: 36px;
   margin-top: 20px;
 }
 
-/* line 366, src/sass/style.scss */
+/* line 362, src/sass/style.scss */
 main .carousel__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,13 +660,13 @@ main .carousel__nav {
 }
 
 @media (min-width: 850px) {
-  /* line 366, src/sass/style.scss */
+  /* line 362, src/sass/style.scss */
   main .carousel__nav {
     display: none;
   }
 }
 
-/* line 379, src/sass/style.scss */
+/* line 375, src/sass/style.scss */
 main .carousel .swiper-pagination-bullet {
   border: 2px solid #f25f3a;
   border-radius: 50%;
@@ -671,26 +676,149 @@ main .carousel .swiper-pagination-bullet {
   margin: 0 3px;
 }
 
-/* line 388, src/sass/style.scss */
+/* line 384, src/sass/style.scss */
 main .carousel .swiper-pagination-bullet-active {
   background: #f25f3a;
 }
 
-/* line 395, src/sass/style.scss */
+/* line 389, src/sass/style.scss */
+main .bottom {
+  min-height: 215px;
+  background-color: #f25f3a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  z-index: 20;
+}
+
+@media (max-width: 850px) {
+  /* line 389, src/sass/style.scss */
+  main .bottom {
+    padding: 90px 35px;
+  }
+}
+
+/* line 401, src/sass/style.scss */
+main .bottom__wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  /* line 401, src/sass/style.scss */
+  main .bottom__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* line 413, src/sass/style.scss */
+main .bottom__wrapper h2 {
+  max-width: 455px;
+  color: #ffffff;
+}
+
+@media (max-width: 850px) {
+  /* line 413, src/sass/style.scss */
+  main .bottom__wrapper h2 {
+    margin-bottom: 25px;
+  }
+}
+
+/* line 421, src/sass/style.scss */
+main .bottom__wrapper .btn {
+  background-color: #ffffff;
+  color: #f25f3a;
+  z-index: 10;
+}
+
+/* line 426, src/sass/style.scss */
+main .bottom__wrapper .btn:hover {
+  color: rgba(242, 95, 58, 0.5);
+}
+
+/* line 432, src/sass/style.scss */
+main .bottom:before {
+  position: absolute;
+  content: "";
+  background: url(../svg/bg-tablet-pattern.svg) right no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 40vw;
+  right: -25%;
+  bottom: 28%;
+  z-index: -5;
+  opacity: 0.1;
+}
+
+@media (max-width: 850px) {
+  /* line 432, src/sass/style.scss */
+  main .bottom:before {
+    height: 100vw;
+    right: -15%;
+    top: -5%;
+  }
+}
+
+/* line 451, src/sass/style.scss */
+main .bottom:after {
+  position: absolute;
+  content: "";
+  background: url(../svg/bg-tablet-pattern.svg) right no-repeat;
+  background-size: contain;
+  width: 60%;
+  height: 40vw;
+  left: -11%;
+  top: -15%;
+  opacity: 0.1;
+  z-index: -5;
+}
+
+@media (max-width: 850px) {
+  /* line 451, src/sass/style.scss */
+  main .bottom:after {
+    height: 100vw;
+    left: 65%;
+    top: 21%;
+  }
+}
+
+/* line 473, src/sass/style.scss */
 footer .attribution {
   color: #242d52;
   text-align: center;
   padding: 25px;
 }
 
-/* line 399, src/sass/style.scss */
+/* line 477, src/sass/style.scss */
 footer .attribution a,
 footer .attribution a:visited,
 footer .attribution a:active {
   color: #f25f3a;
 }
 
-/* line 404, src/sass/style.scss */
+/* line 482, src/sass/style.scss */
 footer .attribution a:hover,
 footer .attribution a:visited:hover,
 footer .attribution a:active:hover {

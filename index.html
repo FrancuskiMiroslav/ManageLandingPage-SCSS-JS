@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!--build:css css/styles.min.css-->
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!--endbuild-->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
@@ -87,11 +87,22 @@
           </li>
         </ul>
       </section>
+
+      <section class="carousel swiper-container">
+        <h2>What they’ve said</h2>
+        <div class="carousel__container swiper-wrapper" id="carousel"></div>
+        <div class="carousel__nav swiper-pagination"></div>
+        <button class="btn">Get Started</button>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="https://francuskimiroslav.com/" target="_blank">Francuski Miroslav</a>.
+      </div>
+    </footer>
     <!--build:js js/main.min.js -->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/slick.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script type="text/javascript" src="js/all.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <!-- endbuild -->

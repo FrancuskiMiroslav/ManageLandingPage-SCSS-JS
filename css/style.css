@@ -551,3 +551,126 @@ main .boxes__info p {
     line-height: 30px;
   }
 }
+
+/* line 300, src/sass/style.scss */
+main .carousel {
+  text-align: center;
+  padding-bottom: 180px;
+  min-width: 100%;
+}
+
+/* line 305, src/sass/style.scss */
+main .carousel h2 {
+  margin-bottom: 60px;
+}
+
+/* line 309, src/sass/style.scss */
+main .carousel .btn {
+  margin-top: 80px;
+}
+
+/* line 313, src/sass/style.scss */
+main .carousel__container {
+  padding-top: 40px;
+  min-width: 100%;
+}
+
+/* line 318, src/sass/style.scss */
+main .carousel .swiper-slide {
+  background-color: #fafafa;
+  padding: 40px;
+  position: relative;
+  cursor: -webkit-grab;
+  cursor: grab;
+  width: 30%;
+}
+
+@media (max-width: 850px) {
+  /* line 318, src/sass/style.scss */
+  main .carousel .swiper-slide {
+    width: 100%;
+  }
+}
+
+/* line 328, src/sass/style.scss */
+main .carousel .swiper-slide .carousel__img {
+  max-width: 75px;
+  top: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+@media (max-width: 850px) {
+  /* line 335, src/sass/style.scss */
+  main .carousel .swiper-slide .carousel__content {
+    padding: 0 40px;
+  }
+}
+
+/* line 340, src/sass/style.scss */
+main .carousel .swiper-slide .carousel__content .carousel__title {
+  font: 24px;
+  margin-bottom: 36px;
+  margin-top: 20px;
+}
+
+/* line 348, src/sass/style.scss */
+main .carousel__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: none;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  height: 100%;
+}
+
+@media (min-width: 850px) {
+  /* line 348, src/sass/style.scss */
+  main .carousel__nav {
+    display: none;
+  }
+}
+
+/* line 361, src/sass/style.scss */
+main .carousel .swiper-pagination-bullet {
+  border: 2px solid #f25f3a;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  margin: 0 3px;
+}
+
+/* line 370, src/sass/style.scss */
+main .carousel .swiper-pagination-bullet-active {
+  background: #f25f3a;
+}
+
+/* line 377, src/sass/style.scss */
+footer .attribution {
+  color: #242d52;
+  text-align: center;
+  padding: 25px;
+}
+
+/* line 381, src/sass/style.scss */
+footer .attribution a,
+footer .attribution a:visited,
+footer .attribution a:active {
+  color: #f25f3a;
+}
+
+/* line 386, src/sass/style.scss */
+footer .attribution a:hover,
+footer .attribution a:visited:hover,
+footer .attribution a:active:hover {
+  color: rgba(36, 45, 82, 0.5);
+}

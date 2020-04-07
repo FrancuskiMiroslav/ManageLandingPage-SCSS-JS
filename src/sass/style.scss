@@ -477,9 +477,11 @@ footer {
     padding: 60px 25px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    position: relative;
+
     @include media-max-width(850) {
       grid-template-columns: 1fr 1fr;
-      padding-bottom: 50px;
+      padding-bottom: 60px;
     }
 
     &__contact {
@@ -511,6 +513,12 @@ footer {
       display: flex;
       margin-top: auto;
 
+      @include media-max-width(850) {
+        margin-bottom: 50px;
+        width: 100%;
+        justify-content: space-between;
+      }
+
       li {
         margin-right: 10px;
 
@@ -527,6 +535,10 @@ footer {
       align-self: baseline;
       li:not(:last-child) {
         margin-bottom: 20px;
+      }
+
+      @include media-max-width(850) {
+        padding-left: 30%;
       }
 
       &.one {
@@ -559,6 +571,8 @@ footer {
       @include media-max-width(850) {
         grid-column: 1/3;
         grid-row: 1/3;
+        margin-bottom: 60px;
+        text-align: center;
       }
 
       .email {
@@ -581,6 +595,13 @@ footer {
 
       .copyright {
         margin-top: auto;
+        @include media-max-width(850) {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+        }
       }
     }
   }

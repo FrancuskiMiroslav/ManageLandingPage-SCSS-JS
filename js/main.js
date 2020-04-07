@@ -56,7 +56,7 @@ window.onload = function () {
         carousel.appendChild(slide);
 
         let swiper = new Swiper(".swiper-container", {
-          spaceBetween: 40,
+          spaceBetween: 30,
           slidesPerView: "auto",
           centeredSlides: true,
           autoplay: {

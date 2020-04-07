@@ -695,7 +695,8 @@ main .bottom {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  z-index: 20;
+  z-index: 1;
+  overflow: hidden;
 }
 
 @media (max-width: 850px) {
@@ -705,7 +706,7 @@ main .bottom {
   }
 }
 
-/* line 401, src/sass/style.scss */
+/* line 402, src/sass/style.scss */
 main .bottom__wrapper {
   max-width: 1170px;
   margin: 0 auto;
@@ -720,10 +721,11 @@ main .bottom__wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  z-index: 5;
 }
 
 @media (max-width: 850px) {
-  /* line 401, src/sass/style.scss */
+  /* line 402, src/sass/style.scss */
   main .bottom__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -733,32 +735,31 @@ main .bottom__wrapper {
   }
 }
 
-/* line 413, src/sass/style.scss */
+/* line 415, src/sass/style.scss */
 main .bottom__wrapper h2 {
   max-width: 455px;
   color: #ffffff;
 }
 
 @media (max-width: 850px) {
-  /* line 413, src/sass/style.scss */
+  /* line 415, src/sass/style.scss */
   main .bottom__wrapper h2 {
     margin-bottom: 25px;
   }
 }
 
-/* line 421, src/sass/style.scss */
+/* line 423, src/sass/style.scss */
 main .bottom__wrapper .btn {
   background-color: #ffffff;
   color: #f25f3a;
-  z-index: 10;
 }
 
-/* line 426, src/sass/style.scss */
+/* line 427, src/sass/style.scss */
 main .bottom__wrapper .btn:hover {
   color: rgba(242, 95, 58, 0.5);
 }
 
-/* line 432, src/sass/style.scss */
+/* line 433, src/sass/style.scss */
 main .bottom:before {
   position: absolute;
   content: "";
@@ -768,12 +769,11 @@ main .bottom:before {
   height: 40vw;
   right: -25%;
   bottom: 28%;
-  z-index: -5;
   opacity: 0.1;
 }
 
 @media (max-width: 850px) {
-  /* line 432, src/sass/style.scss */
+  /* line 433, src/sass/style.scss */
   main .bottom:before {
     height: 100vw;
     right: -15%;
@@ -792,7 +792,6 @@ main .bottom:after {
   left: -11%;
   top: -15%;
   opacity: 0.1;
-  z-index: -5;
 }
 
 @media (max-width: 850px) {
@@ -804,23 +803,80 @@ main .bottom:after {
   }
 }
 
-/* line 473, src/sass/style.scss */
-footer .attribution {
+/* line 471, src/sass/style.scss */
+footer {
+  background-color: #1d1e25;
+  z-index: 20;
+}
+
+/* line 474, src/sass/style.scss */
+footer .footer {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 25px;
+  padding: 60px 25px;
+}
+
+/* line 478, src/sass/style.scss */
+footer .footer__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  min-height: 140px;
+}
+
+/* line 485, src/sass/style.scss */
+footer .footer__contact .logo path {
+  fill: #ffffff;
+}
+
+/* line 490, src/sass/style.scss */
+footer .footer__contact .logo .dots path {
+  fill: #f25f3a;
+}
+
+/* line 497, src/sass/style.scss */
+footer .footer__social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+}
+
+/* line 501, src/sass/style.scss */
+footer .footer__social-icons li {
+  margin-right: 10px;
+}
+
+/* line 505, src/sass/style.scss */
+footer .footer__social-icons li .svg-icon:hover {
+  fill: #f25f3a;
+}
+
+/* line 512, src/sass/style.scss */
+footer .footer .attribution {
   color: #242d52;
   text-align: center;
   padding: 25px;
 }
 
-/* line 477, src/sass/style.scss */
-footer .attribution a,
-footer .attribution a:visited,
-footer .attribution a:active {
+/* line 516, src/sass/style.scss */
+footer .footer .attribution a,
+footer .footer .attribution a:visited,
+footer .footer .attribution a:active {
   color: #f25f3a;
 }
 
-/* line 482, src/sass/style.scss */
-footer .attribution a:hover,
-footer .attribution a:visited:hover,
-footer .attribution a:active:hover {
+/* line 521, src/sass/style.scss */
+footer .footer .attribution a:hover,
+footer .footer .attribution a:visited:hover,
+footer .footer .attribution a:active:hover {
   color: rgba(36, 45, 82, 0.5);
 }

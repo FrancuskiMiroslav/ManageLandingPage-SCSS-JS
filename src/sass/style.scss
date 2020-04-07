@@ -229,12 +229,7 @@ main {
         padding: 0 35px;
       }
       h2 {
-        font-size: 36px;
-        line-height: 36px;
         margin-bottom: 35px;
-        @include media-max-width(850) {
-          line-height: 50px;
-        }
       }
 
       p {
@@ -319,6 +314,7 @@ main {
     text-align: center;
     padding-bottom: 180px;
     min-width: 100%;
+    z-index: 5;
 
     h2 {
       margin-bottom: 60px;
@@ -387,6 +383,88 @@ main {
 
     .swiper-pagination-bullet-active {
       background: rgba($color: $primary_clr, $alpha: 1);
+    }
+  }
+
+  .bottom {
+    min-height: 215px;
+    background-color: $primary_clr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+    @include media-max-width(850) {
+      padding: 90px 35px;
+    }
+
+    &__wrapper {
+      @include wrapper(1170, 25);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      @include media-max-width(850) {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      h2 {
+        max-width: 455px;
+        color: #ffffff;
+        @include media-max-width(850) {
+          margin-bottom: 25px;
+        }
+      }
+
+      .btn {
+        background-color: #ffffff;
+        color: $primary_clr;
+        z-index: 10;
+
+        &:hover {
+          color: rgba($color: $primary_clr, $alpha: 0.5);
+        }
+      }
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      background: url(../svg/bg-tablet-pattern.svg) right no-repeat;
+      background-size: contain;
+      width: 50%;
+      height: 40vw;
+      right: -25%;
+      bottom: 28%;
+      z-index: -5;
+      opacity: 0.1;
+
+      @include media-max-width(850) {
+        height: 100vw;
+        right: -15%;
+        top: -5%;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      background: url(../svg/bg-tablet-pattern.svg) right no-repeat;
+      background-size: contain;
+      width: 60%;
+      height: 40vw;
+      left: -11%;
+      top: -15%;
+      opacity: 0.1;
+      z-index: -5;
+
+      @include media-max-width(850) {
+        height: 100vw;
+        left: 65%;
+        top: 21%;
+      }
     }
   }
 }

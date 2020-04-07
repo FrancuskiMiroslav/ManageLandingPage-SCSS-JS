@@ -29,6 +29,14 @@
   p {
     color: $darkGrayishBlue;
   }
+
+  h2 {
+    font-size: 36px;
+    line-height: 36px;
+    @include media-max-width(850) {
+      line-height: 50px;
+    }
+  }
 }
 
 // responsive fonts

@@ -1,10 +1,14 @@
 /*! project-name v0.0.1 | (c) 2020 Francuski Miroslav | MIT License | http://link-to-your-git-repo.com */
 window.onload = function () {
+  /// toggle nav bar
   const navBtn = document.getElementById("hamburger");
   const nav = document.getElementById("main-nav");
   const navList = document.getElementById("nav-list");
   const navBtnOpen = document.getElementById("open");
   const navBtnClose = document.getElementById("close");
+
+  const form = document.getElementById("form");
+  const email = document.getElementById("email");
 
   navBtn.addEventListener("click", () => {
     navList.classList.toggle("open");
@@ -71,4 +75,36 @@ window.onload = function () {
       });
     })
     .catch((err) => console.error(err));
+
+  //// Email form validation
+
+  // Show input error message
+  function showError(input, message) {
+    const formControl = input.parentElement;
+    formControl.className = "input error";
+    const small = formControl.querySelector("small");
+    small.innerText = message;
+  }
+
+  // Show success outline
+  function showSuccess(input) {
+    const formControl = input.parentElement;
+    formControl.className = "input success";
+  }
+
+  // Check email is valid
+  function checkEmail(input) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!re.test(input.value)) {
+      showError(input, "Please insert a valid email");
+    } else {
+      showSuccess(input);
+    }
+  }
+
+  form.addEventListener("submit", (function (e) {
+    e.preventDefault();
+
+    checkEmail(email);
+  }));
 };

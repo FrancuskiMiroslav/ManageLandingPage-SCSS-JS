@@ -966,6 +966,45 @@ footer .footer .form {
 }
 
 /* line 578, src/sass/style.scss */
+footer .footer .form .input {
+  position: relative;
+}
+
+/* line 580, src/sass/style.scss */
+footer .footer .form .input small {
+  color: #f25f3a;
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  font-style: italic;
+  visibility: hidden;
+  font-size: 10px;
+}
+
+@media (max-width: 850px) {
+  /* line 580, src/sass/style.scss */
+  footer .footer .form .input small {
+    left: -55px;
+    width: 100%;
+  }
+}
+
+/* line 595, src/sass/style.scss */
+footer .footer .form .input.success input {
+  border-color: greenyellow;
+}
+
+/* line 599, src/sass/style.scss */
+footer .footer .form .input.error input {
+  border-color: #f25f3a;
+}
+
+/* line 603, src/sass/style.scss */
+footer .footer .form .input.error small {
+  visibility: visible;
+}
+
+/* line 608, src/sass/style.scss */
 footer .footer .form .email {
   padding: 0 16px;
   border: none;
@@ -973,9 +1012,10 @@ footer .footer .form .email {
   color: #f25f3a;
   line-height: 45px;
   margin-right: 8px;
+  border: 1px solid #ffffff;
 }
 
-/* line 586, src/sass/style.scss */
+/* line 617, src/sass/style.scss */
 footer .footer .form .email::-webkit-input-placeholder {
   color: #9095a7;
 }
@@ -992,19 +1032,27 @@ footer .footer .form .email::placeholder {
   color: #9095a7;
 }
 
-/* line 591, src/sass/style.scss */
+/* line 621, src/sass/style.scss */
+footer .footer .form .email:focus {
+  outline: 0;
+  border: 1px solid #9095a7;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 628, src/sass/style.scss */
 footer .footer .form .btn {
   padding: 0 24px;
   line-height: 45px;
+  border: 1px solid #f25f3a;
 }
 
-/* line 596, src/sass/style.scss */
+/* line 634, src/sass/style.scss */
 footer .footer .form .copyright {
   margin-top: auto;
 }
 
 @media (max-width: 850px) {
-  /* line 596, src/sass/style.scss */
+  /* line 634, src/sass/style.scss */
   footer .footer .form .copyright {
     position: absolute;
     bottom: 0;
@@ -1015,21 +1063,21 @@ footer .footer .form .copyright {
   }
 }
 
-/* line 609, src/sass/style.scss */
+/* line 647, src/sass/style.scss */
 footer .attribution {
   color: #ffffff;
   text-align: center;
   padding: 25px;
 }
 
-/* line 613, src/sass/style.scss */
+/* line 651, src/sass/style.scss */
 footer .attribution a,
 footer .attribution a:visited,
 footer .attribution a:active {
   color: #f25f3a;
 }
 
-/* line 618, src/sass/style.scss */
+/* line 656, src/sass/style.scss */
 footer .attribution a:hover,
 footer .attribution a:visited:hover,
 footer .attribution a:active:hover {

@@ -575,6 +575,36 @@ footer {
         text-align: center;
       }
 
+      .input {
+        position: relative;
+        small {
+          color: $primary_clr;
+          position: absolute;
+          bottom: -20px;
+          left: 20px;
+          font-style: italic;
+          visibility: hidden;
+          font-size: 10px;
+
+          @include media-max-width(850) {
+            left: -55px;
+            width: 100%;
+          }
+        }
+
+        &.success input {
+          border-color: greenyellow;
+        }
+
+        &.error input {
+          border-color: $primary_clr;
+        }
+
+        &.error small {
+          visibility: visible;
+        }
+      }
+
       .email {
         padding: 0 16px;
         border: none;
@@ -582,15 +612,23 @@ footer {
         color: $primary_clr;
         line-height: 45px;
         margin-right: 8px;
+        border: 1px solid #ffffff;
 
         &::placeholder {
           color: $darkGrayishBlue;
+        }
+
+        &:focus {
+          outline: 0;
+          border: 1px solid $darkGrayishBlue;
+          background-color: rgba($color: #000000, $alpha: 0.2);
         }
       }
 
       .btn {
         padding: 0 24px;
         line-height: 45px;
+        border: 1px solid $primary_clr;
       }
 
       .copyright {

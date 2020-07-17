@@ -72,7 +72,11 @@ header {
         content: "";
         min-height: 0;
         min-width: 0;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.5031021632505267) 100%);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(255, 255, 255, 0.5031021632505267) 100%
+        );
         left: 50%;
         opacity: 0;
         position: absolute;
@@ -155,7 +159,11 @@ header {
         content: "";
         min-height: calc(100vh - 100px);
         min-width: 100vw;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.5031021632505267) 100%);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(255, 255, 255, 0.5031021632505267) 100%
+        );
         opacity: 0.5;
         position: absolute;
         top: 0;
@@ -263,7 +271,9 @@ main {
         margin-right: 28px;
 
         @include media-max-width(850) {
-          display: none;
+          padding: 10px 24px;
+          position: absolute;
+          height: auto;
         }
       }
 
@@ -285,19 +295,8 @@ main {
           background-color: $veryPaleRed;
           padding: 0;
           margin-bottom: 20px;
-          &:before {
-            content: counter(countmobile);
-            @include btn;
-            box-shadow: none;
-            font-size: 16px;
-            padding: 12px 24px;
-            height: 100%;
-            margin-right: 16px;
-          }
-
-          &:nth-child(-n + 9):before {
-            content: "0" counter(countmobile);
-          }
+          padding: 12px 85px;
+          border-radius: 50px 0 0 50px;
         }
       }
 

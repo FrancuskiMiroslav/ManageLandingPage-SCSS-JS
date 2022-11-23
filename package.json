@@ -45,7 +45,7 @@
     "cssnano": "4.1.10",
     "autoprefixer": "9.6.1",
     "gulp-svgmin": "2.1.0",
-    "browser-sync": "2.26.7"
+    "browser-sync": "2.27.10"
   },
   "dependencies": {
     "gh-pages": "^2.2.0"
